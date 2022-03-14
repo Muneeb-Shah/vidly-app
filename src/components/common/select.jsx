@@ -2,24 +2,24 @@ import React, { Component } from "react";
 
 class Select extends Component {
   render() {
-    const { name, label, onChange, options } = this.props;
+    const { name, label, onChange, options, error } = this.props;
     return (
       <div className="form-group">
         <label htmlFor={name}>{label}</label>
         <select
-          className="form-control required"
+          className="form-control"
           name={name}
           id={name}
           onChange={onChange}
-          required
         >
-          <option></option>
+          <option value="" />
           {options.map((option) => (
-            <option key={option._id} value={option.name}>
+            <option key={option._id} value={option._id}>
               {option.name}
             </option>
           ))}
         </select>
+        {error && <div className="alert alert-danger">{error}</div>}
       </div>
     );
   }

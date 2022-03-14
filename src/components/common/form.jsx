@@ -71,9 +71,11 @@ class Form extends Component {
     return (
       <Select
         name={name}
+        value={this.state.data[name]}
         label={label}
         options={options}
         onChange={this.handleChange}
+        error={this.state.error[name]}
       />
     );
   };
