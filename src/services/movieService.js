@@ -1,6 +1,5 @@
 import http from "./httpService";
 import config from "../config.json";
-import { func } from "prop-types";
 
 const apiEndpoint = config.apiUrl + "/movies";
 
