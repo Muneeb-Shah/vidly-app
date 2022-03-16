@@ -65,12 +65,10 @@ class NewMovieForm extends Form {
     await saveMovie(this.state.data);
 
     this.props.history.push("/movies");
-    console.log(this.state);
   };
 
   render() {
     const options = this.state.genres;
-    // console.log(this.state);
     return (
       <div>
         <h1>Movie Form</h1>
